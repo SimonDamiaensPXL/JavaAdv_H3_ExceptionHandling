@@ -28,7 +28,7 @@ public class Profile {
 
 	public void setDateOfBirth(LocalDate dateOfBirth) {
 		if (dateOfBirth.isAfter(LocalDate.now())) {
-			throw new InvalidDateException(dateOfBirth,"date of birth","Date of birth is in the future");
+			throw new InvalidDateException(dateOfBirth,"date of birth","No date of birth in future allowed.");
 		}
 		this.dateOfBirth = dateOfBirth;
 	}
